@@ -24,13 +24,31 @@ class _LoginPageState extends State<LoginPage> {
                 const Text('SHRINE'),
               ],
             ),
+
             const SizedBox(height: 120.0),
-            // TODO: Wrap Username with AccentColorOverride (103)
+            TextField(
+              decoration: const InputDecoration(
+                filled: true,
+                labelText: 'Username',
+              ),
+            ),
+// spacer
+            const SizedBox(height: 12.0),
+// [Password]
+            TextField(
+              decoration: const InputDecoration(
+                filled: true,
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
             // TODO: Remove filled: true values (103)
             // TODO: Wrap Password with AccentColorOverride (103)
             // TODO: Add TextField widgets (101)
             // TODO: Add button bar (101)
+
           ],
+
         ),
       ),
     );
