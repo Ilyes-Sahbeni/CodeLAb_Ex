@@ -83,26 +83,28 @@ ThemeData _buildShrineTheme() {
     // TODO: Decorate the inputs (103)
   );
   // TODO: Build a Shrine Text Theme (103)
-  TextTheme _buildShrineTextTheme(TextTheme base) {
+  ThemeData _buildShrineTheme() {
+    final ThemeData base = ThemeData.light();
     return base.copyWith(
-      headline5: base.headline5!.copyWith(
-        fontWeight: FontWeight.w500,
+      colorScheme: base.colorScheme.copyWith(
+        primary: kShrinePurple,
+        secondary: kShrinePurple,
+        error: kShrineErrorRed,
       ),
-      headline6: base.headline6!.copyWith(
-        fontSize: 18.0,
+      scaffoldBackgroundColor: kShrineSurfaceWhite,
+      textTheme: _buildShrineTextTheme(base.textTheme),
+      textSelectionTheme: const TextSelectionThemeData(
+        selectionColor: kShrinePurple,
       ),
-      caption: base.caption!.copyWith(
-        fontWeight: FontWeight.w400,
-        fontSize: 14.0,
+      inputDecorationTheme: const InputDecorationTheme(
+        focusedBorder: CutCornersBorder(
+          borderSide: BorderSide(
+            width: 2.0,
+            color: kShrinePurple,
+          ),
+        ),
+        border: CutCornersBorder(),
       ),
-      bodyText1: base.bodyText1!.copyWith(
-        fontWeight: FontWeight.w500,
-        fontSize: 16.0,
-      ),
-    ).apply(
-      fontFamily: 'Rubik',
-      displayColor: kShrineBrown900,
-      bodyColor: kShrineBrown900,
     );
   }
 }

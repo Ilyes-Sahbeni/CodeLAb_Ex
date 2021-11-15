@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-
+import 'colors.dart';
 import 'app.dart';
 
 void main() => runApp(const ShrineApp());

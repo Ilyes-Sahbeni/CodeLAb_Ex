@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'model/products_repository.dart';
 import 'model/product.dart';
 import 'supplemental/asymmetric_view.dart';
-
+import 'colors.dart';
 class HomePage extends StatelessWidget {
   // TODO: Add a variable for Category (104)
 
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     // TODO: Pass Category variable to AsymmetricView (104)
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         leading: IconButton(
           icon: const Icon(
             Icons.menu,
