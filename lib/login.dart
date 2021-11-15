@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+  // TODO: Add text editing controllers (101)
+  final _usernameController = TextEditingController();
+  final  _passwordController = TextEditingController();
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -30,7 +33,9 @@ class _LoginPageState extends State<LoginPage> {
               decoration: const InputDecoration(
                 filled: true,
                 labelText: 'Username',
+
               ),
+              controller: _usernameController
             ),
 // spacer
             const SizedBox(height: 12.0),
@@ -41,14 +46,32 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: 'Password',
               ),
               obscureText: true,
+              controller: _passwordController
             ),
-            // TODO: Remove filled: true values (103)
-            // TODO: Wrap Password with AccentColorOverride (103)
-            // TODO: Add TextField widgets (101)
             // TODO: Add button bar (101)
-
+            ButtonBar(
+              // TODO: Add a beveled rectangular border to CANCEL (103)
+              children: <Widget>[
+                // TODO: Add buttons (101)
+                TextButton(
+                  child: const Text('CANCEL'),
+                  onPressed: () {
+                    // TODO: Clear the text fields (101)
+                  },
+                ),
+                // TODO: Add an elevation to NEXT (103)
+                // TODO: Add a beveled rectangular border to NEXT (103)
+                ElevatedButton(
+                  child: const Text('NEXT'),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
+            
           ],
-
+          
         ),
       ),
     );
