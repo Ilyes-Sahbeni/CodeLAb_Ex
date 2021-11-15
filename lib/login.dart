@@ -82,21 +82,30 @@ class _LoginPageState extends State<LoginPage> {
                 // TODO: Add buttons (101)
                 TextButton(
                   child: const Text('CANCEL'),
-                  onPressed: () {
-                    // TODO: Clear the text fields (101)
-                  },
+                  style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all(
+                    Theme.of(context).colorScheme.secondary,
+                  ),
+                  shape: MaterialStateProperty.all(
+                    const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                  ),
                 ),
                 // TODO: Add an elevation to NEXT (103)
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
                   child: const Text('NEXT'),
-                  // New code
-                  style: ButtonStyle(
-                  elevation: MaterialStateProperty.all(8.0),
-                  ), onPressed: () {  },
-                ),
+                    style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(8.0),
+                    shape: MaterialStateProperty.all(
+                    const BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                    ),
+                    ),
 
-              ],
+                              ],
             ),
             
           ],
