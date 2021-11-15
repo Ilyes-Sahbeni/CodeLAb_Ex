@@ -96,6 +96,8 @@ class HomePage extends StatelessWidget {
         return Card(
           clipBehavior: Clip.antiAlias,
           // TODO: Adjust card heights (103)
+
+          elevation: 0.0,
 // TODO: Change innermost Column (103)
           children: <Widget>[
 // TODO: Handle overflowing labels (103)

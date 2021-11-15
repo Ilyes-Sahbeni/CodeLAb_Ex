@@ -90,10 +90,12 @@ class _LoginPageState extends State<LoginPage> {
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
                   child: const Text('NEXT'),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
+                  // New code
+                  style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(8.0),
+                  ), onPressed: () {  },
                 ),
+
               ],
             ),
             
